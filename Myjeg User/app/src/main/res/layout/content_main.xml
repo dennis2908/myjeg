@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.talagasoft.gojek.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:padding="5dp">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/cmdAntar"
+                                android:layout_weight="1"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/antar"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick"
+                                android:background="@android:drawable/screen_background_dark_transparent" />
+
+                            <TextView
+                                android:text="Antar Ke Tujuan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView17"
+                                android:layout_weight="1"
+                                android:textStyle="normal|bold"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorYellow" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/kirim_paket"
+                                android:id="@+id/cmdJemput"
+                                android:layout_weight="1"
+                                android:background="@android:drawable/screen_background_dark_transparent"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="Jemput Paket"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView16"
+                                android:layout_weight="1"
+                                android:textStyle="normal|bold"
+                                android:textColor="@color/colorYellow"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/argo"
+                                android:id="@+id/cmdArgo"
+                                android:layout_weight="1"
+                                android:background="@android:drawable/screen_background_dark_transparent"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="Argo Ke Tujuan"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView18"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:textStyle="normal|bold"
+                                android:textColor="@color/colorYellow" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/history"
+                                android:id="@+id/cmdHistory"
+                                android:layout_weight="1"
+                                android:background="@android:drawable/screen_background_dark_transparent"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="History"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView19"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorYellow" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                app:srcCompat="@drawable/deposit"
+                                android:id="@+id/cmdDeposit"
+                                android:layout_weight="1"
+                                android:background="@android:drawable/screen_background_dark_transparent"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick"
+                                android:cropToPadding="false"
+                                android:layout_height="wrap_content" />
+
+                            <TextView
+                                android:text="Deposit"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:textStyle="normal|bold"
+                                android:textColor="@color/colorYellow" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/fail"
+                                android:id="@+id/cmdLogout"
+                                android:layout_weight="1"
+                                android:background="@android:drawable/screen_background_dark_transparent"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="Logout"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorYellow" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="bottom|end"
+            android:gravity="bottom"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.01">
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.01"
+                    android:background="@android:drawable/screen_background_dark_transparent"
+                    android:padding="5dp">
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="168dp"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:text="Balance"
+                            android:layout_width="154dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView9"
+                            android:textColor="@color/colorRed" />
+
+                        <TextView
+                            android:text="100.000,-"
+                            android:layout_width="167dp"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/deposit"
+                            android:textSize="24sp"
+                            android:textColor="@android:color/white"
+                            android:textColorHighlight="@android:color/white" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingRight="20dp">
+
+                        <TextView
+                            android:text="Point Anda"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView13"
+                            android:textColor="@color/colorRed" />
+
+                        <TextView
+                            android:text="0"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/point"
+                            android:textSize="24sp"
+                            android:textColor="@color/colorGreen" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

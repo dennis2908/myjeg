@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_chat"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.talagasoft.gojek.ChatActivity"
+    android:background="@drawable/back">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:id="@+id/divChat"
+        android:visibility="visible"
+        android:padding="5dp">
+
+        <TextView
+            android:text="Silahkan tulis pesan dibawah"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/lblChat"
+            android:textColor="@android:color/white"
+            android:layout_weight="3"
+            android:background="@android:drawable/screen_background_dark_transparent"
+            android:padding="5dp" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center"
+            android:gravity="right">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:inputType="text"
+                android:ems="10"
+                android:id="@+id/lblText"
+                android:layout_weight="1"
+                android:textSize="14sp"
+                android:background="@android:color/white" />
+
+            <Button
+                android:text="Send"
+                android:layout_width="wrap_content"
+                android:id="@+id/btnSend"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:textSize="12sp"
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

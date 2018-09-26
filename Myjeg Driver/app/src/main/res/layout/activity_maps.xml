@@ -1,0 +1,185 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/side_nav_bar"
+        android:id="@+id/divDriver"
+        android:visibility="visible">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="wrap_content">
+            <Button
+                android:layout_height="50dp"
+                android:id="@+id/btnStartTujuan"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/ic_media_play"
+                android:textSize="12sp"
+                android:text="Start"
+                android:visibility="gone"/>
+            <Button
+                android:layout_height="50dp"
+                android:id="@+id/btnStopTujuan"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/ic_delete"
+                android:textSize="12sp"
+                android:text="Stop"
+                android:visibility="gone"/>
+
+            <Button
+                android:layout_height="50dp"
+                android:id="@+id/btnStop"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@drawable/places_ic_clear"
+                android:textSize="12sp"
+                android:text="Stop"
+                android:visibility="gone"/>
+            <Button
+                android:layout_height="50dp"
+                android:id="@+id/btnRefesh"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/stat_notify_sync"
+                android:textSize="12sp"
+                android:text="Scan" />
+            <Button
+                android:text="Siap!"
+                android:layout_height="50dp"
+                android:id="@+id/btnSiap"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@drawable/driver"
+                android:textSize="12sp" />
+            <Button
+                android:layout_height="50dp"
+                android:id="@+id/btnChat"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/stat_notify_chat"
+                android:textSize="10sp" />
+            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCall"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/sym_action_call"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:id="@+id/divTujuan"
+            android:visibility="visible"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp">
+
+            <TextView
+                android:text="Andri Andriana - Jl. Raya Purwakarta No. 3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/lblTujuan"
+                android:autoText="false"
+                android:textStyle="bold"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="10dp">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/divChat"
+                android:visibility="visible"
+                android:padding="5dp"
+                android:background="@drawable/side_nav_bar">
+
+                <TextView
+                    android:text="Silahkan tulis pesan dibawah"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:id="@+id/lblChat"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white" />
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#4a7e37"
+                    android:layout_gravity="center">
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="34dp"
+                        android:inputType="text"
+                        android:ems="10"
+                        android:id="@+id/lblText"
+                        android:textSize="12sp"
+                        android:background="@android:color/white" />
+
+                    <ImageButton
+                        android:layout_width="50dp"
+                        map:srcCompat="@android:drawable/ic_menu_send"
+                        android:id="@+id/btnSend"
+                        android:layout_height="wrap_content"
+                        android:src="@android:drawable/ic_menu_send"
+                        android:layout_gravity="right" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <fragment
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:name="com.google.android.gms.maps.MapFragment"
+                android:id="@+id/map"
+                tools:context="com.talagasoft.gojekdriver.MapsActivity"
+                android:layout_weight="1" />
+
+            <ListView
+                android:layout_width="200dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:id="@+id/lvPenumpang" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

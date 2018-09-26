@@ -1,0 +1,296 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimaryDark">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:layout_height="50dp"
+                android:id="@+id/btnChat"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/stat_notify_chat"
+                android:textSize="10sp" />
+            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/btnCall"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/sym_action_call"
+                android:textSize="12sp" />
+            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/btnStart"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@drawable/mr_ic_play_light"
+                android:textSize="12sp" />
+            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/btnStop"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/ic_delete"
+                android:textSize="12sp" />
+            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRate"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/btn_star_big_on"
+                android:textSize="12sp" />
+            <Button
+                android:layout_height="wrap_content"
+                android:id="@+id/btnRefresh"
+                android:layout_weight="0"
+                android:textAllCaps="false"
+                android:layout_width="50dp"
+                android:drawableLeft="@android:drawable/ic_dialog_map"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="5dp"
+        android:background="@android:color/transparent"
+        android:id="@+id/divSearch">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <android.support.design.widget.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="Cari nama kota, jalan">
+
+                <AutoCompleteTextView
+                    android:id="@+id/txtSearch"
+                    android:layout_height="wrap_content"
+                    android:layout_width="364dp"
+                    android:layout_weight="1"
+                    android:hint="Cari kota, nama jalan"
+                    android:singleLine="true" />
+            </android.support.design.widget.TextInputLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/section_result"
+        android:paddingLeft="10dp"
+        android:paddingRight="5dp"
+        android:visibility="visible"
+        android:divider="@drawable/back"
+        android:paddingBottom="5dp"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Deposit Anda"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/textView10"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:text="0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/deposit"
+                        android:layout_weight="1"
+                        android:textColor="@android:color/holo_red_light"
+                        android:textSize="30sp" />
+
+                    <Button
+                        android:text="Top Up"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnTopUp"
+                        android:layout_weight="1"
+                        android:textAllCaps="false"
+                        android:layout_width="100dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:text="Ongkos"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_width="300dp"
+                        android:textColor="@android:color/white" />
+
+                    <TextView
+                        android:text="20000"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/ongkos"
+                        android:layout_weight="1"
+                        android:textSize="30sp"
+                        android:textStyle="normal|bold"
+                        android:textColor="@android:color/holo_blue_bright"
+                        android:textColorHighlight="@android:color/white"  />
+
+                    <Button
+                        android:text="Submit"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/btnSubmit"
+                        android:layout_weight="1"
+                        android:layout_width="100dp"
+                        android:textAllCaps="false" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Jarak"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white"
+                    android:layout_width="150dp" />
+
+                <TextView
+                    android:text="100"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/jarak"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/holo_orange_light"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Tujuan"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.48"
+                    android:textColor="@android:color/white"
+                    android:layout_width="110dp" />
+
+                <TextView
+                    android:text="Bandung"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tujuan"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <TextView
+                    android:text="Asal"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.13"
+                    android:textColor="@android:color/white"
+                    android:layout_width="80dp" />
+
+                <TextView
+                    android:text="Jakarta"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/asal"
+                    android:layout_weight="1"
+                    android:textColor="@android:color/white" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.MapFragment"
+            android:id="@+id/map"
+            tools:context="com.talagasoft.gojek.MapsActivity"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+</LinearLayout>

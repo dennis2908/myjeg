@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.talagasoft.gojekdriver.MainActivity"
+    tools:showIn="@layout/app_bar_main"
+    android:background="@drawable/back">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="5dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:srcCompat="@drawable/promo"
+                        android:id="@+id/imageView3"
+                        android:scaleType="centerCrop" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/picture_frame">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/cmdMonitor"
+                                android:layout_weight="1"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/antar"
+                                android:background="@color/colorYellow"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="Monitor"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView17"
+                                android:layout_weight="1"
+                                android:textStyle="normal|bold"
+                                android:textAlignment="center"
+                                android:textColor="@color/colorPrimary" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/picture_frame">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/kirim_paket"
+                                android:id="@+id/cmdDompet"
+                                android:layout_weight="1"
+                                android:background="@color/colorMagenta"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="Dompet"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView16"
+                                android:layout_weight="1"
+                                android:textStyle="normal|bold"
+                                android:textColor="@color/colorAccent"
+                                android:textAlignment="center" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/picture_frame">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/argo"
+                                android:id="@+id/cmdProfil"
+                                android:layout_weight="1"
+                                android:background="@color/colorAccent"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="Pofil"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView18"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:textStyle="normal|bold"
+                                android:textColor="@android:color/holo_purple" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:background="@android:drawable/picture_frame">
+
+                            <ImageButton
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/history"
+                                android:id="@+id/cmdHistory"
+                                android:layout_weight="1"
+                                android:background="@color/colorGreen"
+                                android:layout_margin="10dp"
+                                android:onClick="onClick" />
+
+                            <TextView
+                                android:text="History"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView19"
+                                android:layout_weight="1"
+                                android:textAlignment="center"
+                                android:textColor="@android:color/holo_blue_dark" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_gravity="bottom">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="168dp"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="20dp"
+                            android:layout_gravity="bottom">
+
+                            <TextView
+                                android:text="Balance"
+                                android:layout_width="154dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView9"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:text="100.000,-"
+                                android:layout_width="167dp"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/deposit"
+                                android:textSize="24sp"
+                                android:textColor="@color/colorYellow" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingRight="20dp"
+                            android:layout_gravity="bottom|end">
+
+                            <TextView
+                                android:text="Point Anda"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView13"
+                                android:textColor="@android:color/white" />
+
+                            <TextView
+                                android:text="0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/point"
+                                android:textSize="24sp"
+                                android:textColor="@color/colorGreen" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+
+</RelativeLayout>
